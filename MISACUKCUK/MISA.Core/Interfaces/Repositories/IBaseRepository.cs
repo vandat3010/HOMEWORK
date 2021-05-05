@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Interfaces.Repositories
 {
-    public interface IBaseRepository<TEntity> where TEntity: class
+    public interface IBaseRepository<TEntity> where TEntity : class
     {
         /// <summary>
         /// Lấy toàn bộ dữ liệu

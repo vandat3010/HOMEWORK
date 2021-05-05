@@ -39,19 +39,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nvdat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj",
       "projectName": "MISA.Core",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Core\\obj\\",
+      "projectPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj",
+      "packagesPath": "C:\\Users\\nvdat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nvdat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -97,7 +97,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

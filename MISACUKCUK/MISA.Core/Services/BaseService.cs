@@ -4,9 +4,7 @@ using MISA.Core.Interfaces.Repositories;
 using MISA.Core.Interfaces.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MISA.Core.Services
 {
@@ -100,26 +98,29 @@ namespace MISA.Core.Services
                         throw new EntityException(msgError);
                     }
                 }
-                    //Check maxlength
-                    if (maxLengthProperties.Length > 0)
+                //Check maxlength
+                if (maxLengthProperties.Length > 0)
+                {
+                    //Get Value
+                    var propertyValue = property.GetValue(entity);
+                    var maxLength = (maxLengthProperties[0] as MISAMaxLength).MaxLength;
+                    //Check Value 
+                    if (propertyValue.ToString().Length > maxLength)
                     {
-                        //Get Value
-                        var propertyValue = property.GetValue(entity);
-                        var maxLength = (maxLengthProperties[0] as MISAMaxLength).MaxLength;
-                        //Check Value 
-                        if (propertyValue.ToString().Length > maxLength)
-                        {
-                            var msgError = (maxLengthProperties[0] as MISAMaxLength).MsgError;
-                            throw new EntityException(msgError);
-                        }
+                        var msgError = (maxLengthProperties[0] as MISAMaxLength).MsgError;
+                        throw new EntityException(msgError);
                     }
+                }
             }
-                CustomValidate(entity);
         }
-            
-       protected virtual void CustomValidate(TEntity entity)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        protected virtual void CustomValidate(TEntity entity)
         {
-       }
+        }
     }
 }
 

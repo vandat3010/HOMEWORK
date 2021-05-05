@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.CustomAttribute
 {
+    /// <summary>
+    /// Attribute check required.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class MISARequired : Attribute
     {
+        /// <summary>
+        /// Thông báo lỗi tùy chỉnh.
+        /// </summary>
         public string MsgError = string.Empty;
         public string Name = string.Empty;
 

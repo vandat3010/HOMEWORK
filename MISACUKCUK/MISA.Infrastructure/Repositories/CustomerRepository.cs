@@ -51,29 +51,49 @@ namespace MISA.Infrastructure.Repositories
         /// <returns></returns>
         public Pagging<Customer> GetCustomers(CustomerFilter filter)
         {
-            Pagging<Customer> pageNew = new Pagging<Customer>();
+            // Thiết lập kết nối cơ sở dữ liệu.
+            var connection = new MySqlConnection(connectionString);
 
-            var sqlCommand = "Proc_PaggingCustomers";
-            var customers = dbConnection.Query<Customer>(sqlCommand, param: filter, commandType: CommandType.StoredProcedure);
-            var totalPages = 1;
-            if (customers.Count() % 10 == 0)
+            // Tính tổng số khách hàng có điều kiện.
+            var totalRecord = connection.QueryFirstOrDefault<int>("Proc_D_GetTotalCustomer", filter, commandType: CommandType.StoredProcedure);
+
+            // Lấy danh sách khách hàng có phân trang.
+            var customers = connection.Query<Customer>("Proc_CustomerFilter", filter, commandType: CommandType.StoredProcedure);
+
+            // trả dữ liệu.
+            var paging = new Pagging<Customer>()
             {
-                totalPages = customers.Count() / 10;
-            }
-            else
-            {
-                totalPages = (customers.Count() / 10) + 1;
-            }
-            pageNew = new Pagging<Customer>
-            {
-                totalRecord = customers.Count(),
-                totalPages = totalPages,
-                pageIndex = filter.Page,
+                totalRecord = totalRecord,
                 data = customers,
+                pageIndex = filter.PageIndex,
                 pageSize = filter.PageSize
             };
-            pageNew.data = customers;
-            return pageNew;
+            return paging;
+
+
+            /*  Pagging<Customer> pageNew = new Pagging<Customer>();
+
+              var sqlCommand = "Proc_PaggingCustomers";
+              var customers = dbConnection.Query<Customer>(sqlCommand, param: filter, commandType: CommandType.StoredProcedure);
+              var totalPages = 1;
+              if (customers.Count() % 10 == 0)
+              {
+                  totalPages = customers.Count() / 10;
+              }
+              else
+              {
+                  totalPages = (customers.Count() / 10) + 1;
+              }
+              pageNew = new Pagging<Customer>
+              {
+                  totalRecord = customers.Count(),
+                  totalPages = totalPages,
+                  pageIndex = filter.PageIndex,
+                  data = customers,
+                  pageSize = filter.PageSize
+              };
+              pageNew.data = customers;
+              return pageNew;*/
         }
     }
 }

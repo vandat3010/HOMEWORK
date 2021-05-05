@@ -26,6 +26,9 @@ namespace MISACUKCUK.Controllers
             _customerService = customerService;
         }
         #endregion
+
+        #region public Method
+
         /// <summary>
         /// Lấy danh sách khách hàng theo từng điều kiện lọc
         /// </summary>
@@ -34,7 +37,7 @@ namespace MISACUKCUK.Controllers
         /// HTTPStatusCode - 200 : có dữ liệu trả về
         /// HTTPStatusCode - 204 : không có dữ liệu
         /// </returns>
-        #region public Method
+
         [HttpGet("Fiter")]
         public IActionResult GetCustomers([FromQuery] CustomerFilter customerFilter)
         {

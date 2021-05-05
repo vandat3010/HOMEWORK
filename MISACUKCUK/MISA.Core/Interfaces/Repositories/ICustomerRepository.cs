@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Interfaces.Repositories
 {
-    public interface ICustomerRepository: IBaseRepository<Customer>
+    public interface ICustomerRepository : IBaseRepository<Customer>
     {
         /// <summary>
         /// check mã khách hàng tồn tại hay chưa

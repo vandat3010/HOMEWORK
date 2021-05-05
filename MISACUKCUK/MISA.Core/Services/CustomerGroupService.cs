@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Services
 {
-    public class CustomerGroupService: BaseService<CustomerGroup>, ICustomerGroupService
+    public class CustomerGroupService : BaseService<CustomerGroup>, ICustomerGroupService
     {
         private ICustomerGroupRepository _customerGroupRepository;
 
-        public CustomerGroupService(ICustomerGroupRepository customerGroupRepository): base(customerGroupRepository)
+        public CustomerGroupService(ICustomerGroupRepository customerGroupRepository) : base(customerGroupRepository)
         {
             _customerGroupRepository = customerGroupRepository;
         }

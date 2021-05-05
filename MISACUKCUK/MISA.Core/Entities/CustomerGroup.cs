@@ -10,7 +10,7 @@ namespace MISA.Core.Entities
     /// <summary>
     /// Thông tin nhóm khách hàng
     /// </summary>
-    public class CustomerGroup: Base
+    public class CustomerGroup : Base
     {
         /// <summary>
         /// Id nhóm khách hàng.

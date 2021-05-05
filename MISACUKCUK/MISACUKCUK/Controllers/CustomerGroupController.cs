@@ -17,7 +17,7 @@ namespace MISACUKCUK.Controllers
         private ICustomerGroupService _customerGroupService;
         private ICustomerGroupRepository _customerGroupRepository;
 
-        public CustomerGroupController(ICustomerGroupService customerGroupService, ICustomerGroupRepository customerGroupRepository): base(customerGroupService, customerGroupRepository)
+        public CustomerGroupController(ICustomerGroupService customerGroupService, ICustomerGroupRepository customerGroupRepository) : base(customerGroupService, customerGroupRepository)
         {
             _customerGroupService = customerGroupService;
             _customerGroupRepository = customerGroupRepository;

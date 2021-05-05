@@ -84,7 +84,7 @@ namespace MISA.Infrastructure.Repositories
         /// <returns>trả về thông tin bản ghi được thêm</returns>
         public int Insert(TEntity entity)
         {
-             using (dbConnection = new MySqlConnection(connectionString))
+            using (dbConnection = new MySqlConnection(connectionString))
             {
                 var sql = $"Proc_Insert{tableName}";
                 var rowEffects = dbConnection.Execute(sql, entity, commandType: CommandType.StoredProcedure);

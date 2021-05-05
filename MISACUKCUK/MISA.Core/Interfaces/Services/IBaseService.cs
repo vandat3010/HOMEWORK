@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Interfaces.Services
 {
-    public interface IBaseService<TEntity> where TEntity: class
+    public interface IBaseService<TEntity> where TEntity : class
     {
         /// <summary>
         /// Lấy toàn bộ dữ liệu bản ghi

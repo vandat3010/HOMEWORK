@@ -60,7 +60,7 @@ namespace MISACUKCUK.Controllers
         public IActionResult Get(Guid entityId)
         {
             var entity = _baseRepository.GetById(entityId);
-            if(entity != null)
+            if (entity != null)
             {
                 return Ok(entity);
             }
@@ -80,7 +80,7 @@ namespace MISACUKCUK.Controllers
         public IActionResult Post([FromBody] TEntity entity)
         {
             var rowAffects = _baseService.Insert(entity);
-            if(rowAffects > 0)
+            if (rowAffects > 0)
             {
                 return StatusCode(201, rowAffects);
             }
@@ -104,16 +104,16 @@ namespace MISACUKCUK.Controllers
             //lấy tất cả property của đối tượng
             var properties = typeof(TEntity).GetProperties();
             //Duyệt tất cả property của đối tượng
-            foreach(var property in properties)
+            foreach (var property in properties)
             {
                 //kiểm tra tên của property với entityId thì gán giá trị property = id
-                if(property.Name == $"{tableName}Id")
+                if (property.Name == $"{tableName}Id")
                 {
                     property.SetValue(entity, id);
                 }
             }
             var rowAffects = _baseService.Update(entity);
-            if(rowAffects > 0)
+            if (rowAffects > 0)
             {
                 return Ok(entity);
             }
@@ -132,7 +132,7 @@ namespace MISACUKCUK.Controllers
         public IActionResult Delete(Guid entityId)
         {
             var rowAffects = _baseService.Delete(entityId);
-            if (rowAffects > 0) 
+            if (rowAffects > 0)
             {
                 return Ok();
 

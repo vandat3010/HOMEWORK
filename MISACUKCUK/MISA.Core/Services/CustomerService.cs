@@ -13,11 +13,15 @@ namespace MISA.Core.Services
     public class CustomerService : BaseService<Customer>, ICustomerService
     {
         private ICustomerRepository _customerRepository;
-        public CustomerService(ICustomerRepository customerRepository): base(customerRepository)
+        public CustomerService(ICustomerRepository customerRepository) : base(customerRepository)
         {
             _customerRepository = customerRepository;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang co loc
+        /// </summary>
+        /// <param name="filter">Điều kiện lọc</param>
+        /// <returns>danh sách khách hàng</returns>
         public Pagging<Customer> GetCustomers(CustomerFilter filter)
         {
             return _customerRepository.GetCustomers(filter);

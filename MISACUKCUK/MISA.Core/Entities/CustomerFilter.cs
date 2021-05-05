@@ -15,7 +15,7 @@ namespace MISA.Core.Entities
         /// <summary>
         /// Số thứ tự bản ghi
         /// </summary>
-        public int Page { get; set; } = 1;
+        public int PageIndex { get; set; } = 1;
 
         /// <summary>
         /// Số lượng bản ghi có trong Page

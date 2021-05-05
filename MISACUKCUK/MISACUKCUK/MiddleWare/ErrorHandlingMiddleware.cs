@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
+using MISA.Core.CustomExceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -27,11 +29,19 @@ namespace MISA.CukCuk.Api.Middleware
                 await HandleExceptionAsync(context, ex);
             }
         }
-
+        /// <summary>
+        /// bắt các ngoại lệ
+        /// </summary>
+        /// <param name="context">context hiên tại</param>
+        /// <param name="exception">Ngoại lệ</param>
+        /// <returns></returns>
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            //HttpStatusCode status;
-            //string message;
+            HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
+            if (exception is EntityException)
+            {
+                statusCode = HttpStatusCode.BadRequest;
+            }
 
             var response = new
             {

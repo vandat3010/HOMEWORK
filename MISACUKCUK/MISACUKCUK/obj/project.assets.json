@@ -5817,19 +5817,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nvdat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISACUKCUK\\MISACUKCUK.csproj",
+      "projectUniqueName": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISACUKCUK\\MISACUKCUK.csproj",
       "projectName": "MISACUKCUK",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISACUKCUK\\MISACUKCUK.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISACUKCUK\\obj\\",
+      "projectPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISACUKCUK\\MISACUKCUK.csproj",
+      "packagesPath": "C:\\Users\\nvdat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISACUKCUK\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nvdat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5843,11 +5843,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj"
+            "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj": {
+              "projectPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Core\\MISA.Core.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Misa\\MISACUKCUK\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
+            "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nvdat\\Desktop\\moi\\Homework\\MISACUKCUK\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
             }
           }
         }
@@ -5909,7 +5909,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
